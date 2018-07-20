@@ -1,5 +1,4 @@
 <?php
-
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 $arrLocales = array('pl_PL', 'pl','Polish_Poland.28592');
 setlocale( LC_ALL, $arrLocales );
@@ -18,11 +17,11 @@ function XML2Array(SimpleXMLElement $parent) {
 }
 
 $wsdl = 'https://datastore.ceidg.gov.pl/CEIDG.DataStore/services/NewDataStoreProvider.svc?singleWsdl';
-$nip = array("1132589527");
+$Postcode = array("26-630");
 $token = 'o041TbI8xTzHzvHyy3viZeWSMV5SJ4h7TIiKT5quqAVkkgo2gTssPEk7OACZJRY3';
 $data = array(
     "AuthToken"  => $token,
-    "NIP"        => $nip,
+    "Postcode"   => $Postcode,
 );
 
 $soap = new SoapClient($wsdl);
